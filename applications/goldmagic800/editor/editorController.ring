@@ -47,8 +47,8 @@ class editorController from windowsControllerParent
 		for y = 1 to C_ROWS
 			for x = 1 to C_COLS
 				aButton[y][x] = new qPushButton(oView.win) {
-					move(x*50-8,y*37+65)
-					resize(50,37)
+					move(x*50-11,y*30+66)
+					resize(50,30)
 					setClickEvent(Method("CellClick("+y+","+x+")"))
 				}				
 			next 	
@@ -155,7 +155,7 @@ class editorController from windowsControllerParent
 				aButton[y][x].setstylesheet("color:White;background-color:green;")	
 				aButton[y][x].setText("D2")
 			on C_GOLDCUBE
-				aButton[y][x].setstylesheet("color:White;background-color:cyan;")	
+				aButton[y][x].setstylesheet("color:purple;background-color:cyan;")	
 				aButton[y][x].setText("GC")
 			on C_DOOR3
 				aButton[y][x].setstylesheet("color:White;background-color:green;")	
