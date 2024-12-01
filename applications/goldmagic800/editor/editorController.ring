@@ -12,7 +12,7 @@ import System.GUI
 if IsMainSourceFile() {
 	new App {
 		StyleFusion()
-		open_window(:editorController)
+		openWindow(:editorController)
 		exec()
 	}
 }
@@ -20,13 +20,13 @@ if IsMainSourceFile() {
 class editorController from windowsControllerParent
 
 
-	aLevel  = newlist(C_ROWS,C_COLS)
+	aLevel  = list(C_ROWS,C_COLS)
 	PrepareLevel()
 
-	aButton = newlist(C_ROWS,C_COLS)
+	aButton = list(C_ROWS,C_COLS)
 
 	oView = new editorView
-	oView.tablewidget1.setenabled(False)
+
 	DrawButtons()
 
 	cCurrentFileName = ""
